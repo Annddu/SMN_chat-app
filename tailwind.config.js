@@ -1,13 +1,14 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
 
-const defaultTheme = require('tailwindcss/defaultTheme');
+// const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
     fontFamily: {
-      satoshi: ['Oswald', 'Inter', 'sans-serif'],
+      satoshi: ['Oswalds', 'Inter', 'sans-serif'],
     },
     screens: {
       '2xsm': '375px',
