@@ -8,7 +8,7 @@ export default {
   darkMode: 'class',
   theme: {
     fontFamily: {
-      satoshi: ['Oswalds', 'Inter', 'sans-serif'],
+      satoshi: ['Inter', 'sans-serif'],
     },
     screens: {
       '2xsm': '375px',
