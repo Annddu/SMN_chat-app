@@ -102,7 +102,7 @@ export default function Inbox() {
         <div className='sticky bottom-0 border-t border-stroke bg-white px-6 py-5 dark:border-strokedark dark:bg-boxdark'>
             <form className='flex items-center justify-between space-x-4.5'>
                 <div className='relative w-full'>
-                    <input type="text" placeholder='Type something here' className='h-13 w-full rounded-md border border-stroke bg-gray pl-5 pr-19 text-black placeholder-body outline-none focus:border-primary'/>
+                    <input type="text" placeholder='Type something here' className='h-13 w-full rounded-md border border-stroke bg-gray pl-5 pr-19 text-black placeholder-body outline-none focus:border-primary dark:bg-boxdark-2 dark:border-strokedark'/>
                 
                     <div className='absolute right-5 top-1/2 -translate-y-1/2 items-center justify-end space-x-4'>
                         <button className='hover:text-primary'>
