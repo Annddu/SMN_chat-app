@@ -28,10 +28,10 @@ export default function Verification() {
                                     {Array.from({length: 4}).map((_, index) => <input type='text' key={index} className='w-full rounded-md border-[1.5px] border-stroke bg-transparent px-5 py-3 text-center text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary'/>)}
                                 </div>
 
-                                <p className='mb-5 mt-4 text-left font-medium text-black dark:text-white space-x-2 flex flex-row items-center'>
+                                <div className='mb-5 mt-4 text-left font-medium text-black dark:text-white space-x-2 flex flex-row items-center'>
                                     <div>Did you not receive a code?</div>
                                     <button className='text-primary'>Resend</button>
-                                </p>
+                                </div>
 
                                 <button className='flex w-full justify-center rounded-md bg-primary p-[13px] font-bold text-gray hover:bg-opacity-90'>
                                     Verify

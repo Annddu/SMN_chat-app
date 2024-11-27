@@ -1,5 +1,5 @@
 import { MagnifyingGlass } from '@phosphor-icons/react'
-import React from 'react'
+import React, { useState } from 'react'
 
 import User01 from "../../images/user/user-01.png";
 import User02 from "../../images/user/user-02.png";
@@ -54,6 +54,8 @@ const List = [
 ];
 
 export default function ChatList() {
+  const [selected, setSelected] = useState(0);
+
   return (
     <div className='hidden h-full flex-col xl:flex xl:w-1/4'>
 
@@ -71,7 +73,7 @@ export default function ChatList() {
       </div>
 
       {/* Search Bar */}
-      <div className='flex max-h-full flex-col overflow-auto p-5'>
+      <div className='flex max-h-full flex-col overflow-auto p-5 no-scrollbar'>
         <form className='sticky mb-7'>
           <input  placeholder='Search...'
                   type='text'
@@ -90,10 +92,14 @@ export default function ChatList() {
       <div className='no-scrollbar overflow-auto max-h-full space-y-2.5'>
         {/* Chat List item */}
         {List.map((object, item) => {
-          return <div className=' flex cursor-pointer items-center rounded px-4 py-2
+          return <div className={`flex cursor-pointer items-center rounded px-4 py-2
                                 hover:bg-gray-2
-                                dark:hover:bg-strokedark'
-                  key={item}>
+                                dark:hover:bg-strokedark 
+                                ${selected === item ? "bg-gray-2 dark:bg-strokedark" : "hover:bg-gray-2 dark:hover:bg-strokedark "}`}
+                  key={item} 
+                  onClick={() => {
+                    setSelected(item);
+                  }}>
                     <div className='relative mr-3.5 h-11 w-full max-w-11 rounded-full'>
                       <img src={object.imgSrc} alt="profile" className='h-full w-full rounded-full object-cover object-center'/>
 
