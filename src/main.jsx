@@ -4,16 +4,17 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 
+import {Provider as ReduxProvider} from "react-redux"
+import { store } from './redux/store.js'
+
 createRoot(document.getElementById('root')).render(
-  // StrictMode is a tool for highlighting potential problems in an application.
-  // Like Fragment, StrictMode does not render any visible UI.
-  // It activates additional checks and warnings for its descendants.
-  <StrictMode>
-    {/* BrowserRouter is a Router that uses the HTML5 history API */}
-    <BrowserRouter>
-      {/* App is the root component */}
-      <App />
-    </BrowserRouter>
-  </StrictMode>
+
+  // <StrictMode>
+    <ReduxProvider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ReduxProvider>
+  // </StrictMode>
 )
 

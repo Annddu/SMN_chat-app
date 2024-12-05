@@ -2,6 +2,7 @@ import { Sidebar } from '../section/chat'
 import React from 'react'
 import ChatList from '../section/chat/ChatList'
 import Inbox from '../section/chat/Inbox'
+import GifModal from '../components/GifModal'
 
 export default function Messages() {
   return (
@@ -19,6 +20,7 @@ export default function Messages() {
         {/* Inbox */}
         <Inbox />
       </div>
+      <GifModal/>
     </div>
   )
 }

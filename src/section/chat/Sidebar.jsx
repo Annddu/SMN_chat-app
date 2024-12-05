@@ -44,7 +44,7 @@ export default function Sidebar() {
           <div className='mx-auto border rounded-md border-stroke p-2 dark:border-strokedark'>
             <Shapes size={24}/>
           </div>
-          <span className='font-medium text-sm'>Workspace</span>
+          <span className='font-medium text-sm'>AppName</span>
         </div>
 
         {NAVIGATION.map(({icon, key, title}) => (
